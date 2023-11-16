@@ -1,3 +1,12 @@
+---1 
+Select SUM(new_cases) as total_cases, SUM(new_deaths ) as total_deaths, SUM(new_deaths )/SUM(New_Cases)*100 as DeathPercentage
+From covid..CovidDeaths
+--Where location like '%states%'
+where continent is not null 
+--Group By date
+order by 1,2
+---
+
 SELECT
     ---date,
     SUM(new_cases) as Total_cases,
